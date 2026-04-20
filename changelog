@@ -1,0 +1,39 @@
+Proje 2: Veritabanı Yedekleme ve Felaketten Kurtarma
+*Microsoft SQL Server üzerinde yerel bir veritabanı ortamı kurulmuştur.
+*“mainDatabase” adlı veritabanı ve “Customers” tablosu oluşturulmuştur.
+*Test amacıyla manuel olarak veri seti eklenmiştir.
+*Full yedekleme işlemi gerçekleştirilmiştir.
+*Veri değişikliği sonrası differential yedekleme alınmıştır.
+*Transaction log yedekleme işlemi uygulanmıştır.
+*Veri silinerek felaket senaryosu oluşturulmuştur.
+*Full backuptan geri yükleme işlemi gerçekleştirilmiştir.
+*Differantial backup kullanılarak eksik veriler geri getirilmiştir.
+*Point-in-time restore işlemi transaction log ile uygulanmıştır.
+*SQL Server Agent ile otomatik yedekleme görevi tanımlanmıştır.
+*Haftalık zamanlanmış backup job oluşturulmuştur.
+*Yedek dosyalarının doğruluğu VERIFYONLY ile kontrol edilmiştir.
+*CHECKSUM ile yedekleme sırasında veri bütünlüğü doğrulaması yapılmıştır.
+*Sandboxing tekniği denenmiştir.
+*Test ortamında restore edilerek yedekler doğrulanmıştır.
+*Database mirroring yapısı teorik olarak incelenmiştir.
+
+Proje 5: Veri Temizleme ve ETL Süreçleri
+*Kaggle üzerinden otel veri seti temin edilmiştir.
+*“HotelProject” adlı veritabanı oluşturulmuştur.
+*Veri seti SQL Server ortamına import edilmiştir.
+*Import sırasında oluşan veri tipi ve null hataları düzeltilmiştir.
+*Ham veriler için “Staging_HotelData” tablosu oluşturulmuştur.
+*Veri setine RowID kimlik sütunu eklenmiştir.
+*Staging tablosuna ana tablodan veri kopyalanmıştır.
+*“Production_HotelData” tablosu oluşturularak ETL yapısı kurulmuştur.
+*String veri tipleri uygun sayısal veri tiplerine dönüştürülmüştür.
+*Null değerler COALESCE kullanılarak varsayılan değerlerle değiştirilmiştir.
+*“agent” sütunu temizlenerek “agent_id” olarak yeniden düzenlenmiştir.
+*Tarih alanları birleştirilerek DATE formatına dönüştürülmüştür.
+*“adr” değeri decimal tipe çevrilerek “daily_rate” olarak güncellenmiştir.
+*Toplam kişi sayısı hesaplanarak “total_guests” alanı oluşturulmuştur.
+*Ay isimleri standartlaştırılarak büyük harfe çevrilmiştir.
+*Veri temizleme öncesi ve sonrası karşılaştırma raporları oluşturulmuştur.
+*Null değerlerin tamamen giderildiği doğrulanmıştır.
+*Staging ve production tabloları join ile karşılaştırılmıştır.
+*ETL süreci sonunda temiz veri production tablosuna yüklenmiştir.
